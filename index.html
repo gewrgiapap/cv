@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"> <!-- Εξωτερικός σύνδεσμος για το αρχείο CSS -->
+</head>
+<body>
+  <div class="container">
+    <!-- Επιλογέας γλώσσας με δύο εικόνες σημαίας, οι οποίες καλούν τη συνάρτηση changeLanguage() -->
+    <div class="header-wrapper">
+      <div class="language-switcher">
+        <ul>
+          <li onclick="changeLanguage('el')">
+            <img src="greece.png" alt="Greece Flag" class="flag-icon">
+          </li>
+          <li onclick="changeLanguage('en')">
+            <img src="united-kingdom.png" alt="United Kingdom Flag" class="flag-icon">
+          </li>
+        </ul>
+      </div>
+      <!-- Κουμπί για αλλαγή θέματος, το οποίο καλεί τη συνάρτηση toggleTheme() -->
+      <div class="toggle-theme">
+        <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+        <label for="theme-toggle"></label>
+      </div>
+    </div>
+
+    <!-- Κεφαλίδα για την ελληνική γλώσσα με τον τίτλο "Το Βιογραφικό μου" -->
+    <header lang="el" id="header-el">
+      <h1>Το Βιογραφικό μου</h1>
+    </header>
+    <!-- Κεφαλίδα για την αγγλική γλώσσα με τον τίτλο "My Resume", κρυφή μέχρι ενεργοποιηθεί -->
+    <header lang="en" id="header-en" style="display: none;">
+      <h1>My Resume</h1>
+    </header>
+
+    <!-- Εικόνα προφίλ με την κλάση "profile-picture" και τη συνάρτηση animateProfilePicture() -->
+    <div class="profile-picture-container" onmouseover="animateProfilePicture()">
+      <img src="photo.jpg" alt="Εικόνα προφίλ" class="profile-picture" id="profilePicture">
+    </div>
+
+    <!-- Ενότητα "Προσωπικά Στοιχεία" για την ελληνική γλώσσα, ορατή -->
+    <section id="about" lang="el" style="display: block;">
+      <h2>Προσωπικά Στοιχεία</h2>
+      <p>Είμαι ένας φιλόδοξος [το επάγγελμά σας], με έδρα την [τοποθεσία σας]. Λατρεύω τα [ενδιαφέροντα/χόμπι σας] και προσπαθώ να πετύχω [στόχους/αντικείμενα της καριέρας σας].</p>
+
+      <!-- Εικονίδια για διεύθυνση email και κινητό -->
+      <div class="contact-icons">
+        <a href="mailto:gewrgiapap98@gmail.com">
+          <img src="email-icon.png" alt="Email Icon">
+          gewrgiapap98@gmail.com 
+        </a>
+        <a href="tel:6981160282">
+          <img src="phone-icon.png" alt="Phone Icon">
+          6981160282
+        </a>
+        <a href="https://www.google.com/maps/place/%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@38.0602976,19.8337539,6z/data=!3m1!4b1!4m6!3m5!1s0x135b4ac711716c63:0x363a1775dc9a2d1d!8m2!3d39.074208!4d21.824312!16zL20vMDM1cXk?entry=ttu">
+          <img src="address-icon.png" alt="Address Icon">
+          Ελλάδα
+        </a>
+      </div>
+    </section>
+    <!-- Ενότητα "About" για την αγγλική γλώσσα, κρυμμένη μέχρι ενεργοποιηθεί -->
+    <section id="about" lang="en" style="display: none;">
+      <h2>About</h2>
+      <p>I am an ambitious [your profession], based in [your location]. I love [your interests/hobbies] and strive to achieve [your career goals/objects].</p>
+
+      <!-- Εικονίδια για διεύθυνση email και κινητό -->
+      <div class="contact-icons">
+        <a href="mailto:gewrgiapap98@gmail.com">
+          <img src="email-icon.png" alt="Email Icon">
+          gewrgiapap98@gmail.com 
+        </a>
+        <a href="tel:6981160282">
+          <img src="phone-icon.png" alt="Phone Icon">
+          +30 6981160282
+        </a>
+        <a href="https://www.google.com/maps/place/%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@38.0602976,19.8337539,6z/data=!3m1!4b1!4m6!3m5!1s0x135b4ac711716c63:0x363a1775dc9a2d1d!8m2!3d39.074208!4d21.824312!16zL20vMDM1cXk?entry=ttu">
+          <img src="address-icon.png" alt="Address Icon">
+          Greece
+        </a>
+      </div>
+    </section>
+
+    <!-- Ενότητα "Εργασιακή Εμπειρία" για την ελληνική γλώσσα, ορατή -->
+    <section id="experience" lang="el" style="display: block;">
+      <h2>Εργασιακή Εμπειρία</h2>
+      <ul>
+        <li>
+          <h3>Θέση Εργασίας 1</h3>
+          <p>Περιγραφή θέσης εργασίας 1</p>
+        </li>
+        <li>
+          <h3>Θέση Εργασίας 2</h3>
+          <p>Περιγραφή θέσης εργασίας 2</p>
+        </li>
+      </ul>
+    </section>
+    <!-- Ενότητα "Experience" για την αγγλική γλώσσα, κρυμμένη μέχρι ενεργοποιηθεί -->
+    <section id="experience" lang="en" style="display: none;">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <h3>Job Position 1</h3>
+          <p>Job description 1</p>
+        </li>
+        <li>
+          <h3>Job Position 2</h3>
+          <p>Job description 2</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Ενότητα "Εκπαίδευση" για την ελληνική γλώσσα, ορατή -->
+    <section id="education" lang="el" style="display: block;">
+      <h2>Εκπαίδευση</h2>
+      <ul>
+        <li>
+          <h3>Πτυχίο Α</h3>
+          <p>Περιγραφή πτυχίου Α</p>
+        </li>
+        <li>
+          <h3>Πτυχίο Β</h3>
+          <p>Περιγραφή πτυχίου Β</p>
+        </li>
+      </ul>
+    </section>
+    <!-- Ενότητα "Education" για την αγγλική γλώσσα, κρυμμένη μέχρι ενεργοποιηθεί -->
+    <section id="education" lang="en" style="display: none;">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <h3>Degree A</h3>
+          <p>Degree description A</p>
+        </li>
+        <li>
+          <h3>Degree B</h3>
+          <p>Degree description B</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Ενότητα "Δεξιότητες" για την ελληνική γλώσσα, ορατή -->
+    <section id="skills" lang="el" style="display: block;">
+      <h2>Δεξιότητες</h2>
+      <div class="skill">
+        <div class="skill-title">Java</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="80"></div>
+        </div>
+      </div>
+      <!-- Προσθέστε τις υπόλοιπες δεξιότητες εδώ -->
+      <div class="skill">
+        <div class="skill-title">C++</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="45"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">Python</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="60"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">JavaScript</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="50"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">HTML</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="90"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">CSS</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="85"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">SQL</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="70"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Ενότητα "Skills" για την αγγλική γλώσσα, κρυμμένη μέχρι ενεργοποιηθεί -->
+    <section id="skills" lang="en" style="display: none;">
+      <h2>Skills</h2>
+      <div class="skill">
+        <div class="skill-title">JAVA</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="80"></div>
+        </div>
+      </div>
+      <!-- Προσθέστε τις υπόλοιπες δεξιότητες εδώ -->
+      <div class="skill">
+        <div class="skill-title">C++</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="45"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">Python</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="60"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">JavaScript</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="50"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">HTML</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="90"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">CSS</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="85"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">SQL</div>
+        <div class="progressbar">
+          <div class="progressbar__inner" data-percent="70"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Υποσέλιδο για την ελληνική γλώσσα, ορατό -->
+    <footer lang="el" id="footer-el">
+      <p>&copy; Copyright 2023. All Rights Reserved | Developed by Georgia Papadopoulou</p>
+    </footer>
+    <!-- Υποσέλιδο για την αγγλική γλώσσα, κρυμμένο μέχρι ενεργοποιηθεί -->
+    <footer lang="en" id="footer-en" style="display:none;">
+      <p>&copy; Copyright 2023. All Rights Reserved | Developed by Georgia Papadopoulou</p>
+    </footer>
+  </div>
+  <script src="script.js"></script> <!-- Εξωτερικός σύνδεσμος για το αρχείο JavaScript -->
+</body>
+</html>

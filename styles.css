@@ -1,0 +1,217 @@
+:root {
+  --text-color-light: #16151a;
+  --bg-color-light: #f8f6f9;
+  --text-color-dark: #f8f6f9;
+  --bg-color-dark: #16151a;
+}
+
+/* Toggle για εναλλαγή dark/light*/
+#theme-toggle {
+  visibility: hidden;
+}
+
+#theme-toggle + label {
+  content: '';
+  display: inline-block;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+#theme-toggle:not(:checked) + label {
+  background-color: #FDB813;
+}
+
+#theme-toggle:checked + label {
+  background-color: transparent;
+  box-shadow: inset -8px -6px 1px 1px #fff;
+}
+
+/* Γενικά στυλ header */
+.header-wrapper {
+  display: flex; /* Θέτουμε τον header-wrapper ως flex container */
+  align-items: center; /* Κατακόρυφος άξονας: ταξινόμηση των στοιχείων κατά το κέντρο */
+  justify-content: space-between; /* Οριζόντιος άξονας: τοποθέτηση στοιχείων στις άκρες */
+  margin-bottom: 20px; /* Προσθέτουμε κάποιο κενό στο κάτω μέρος του header-wrapper */
+}
+
+/* Γενικά στυλ σώματος και στυλ κοντέινερ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(119deg, #d90a2c, #ad283e, #f8f6f9, #16151a);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 20s ease infinite;
+   animation: AnimationName 20s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:88% 0%}
+    50%{background-position:13% 100%}
+    100%{background-position:88% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:88% 0%}
+    50%{background-position:13% 100%}
+    100%{background-position:88% 0%}
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f6f9;
+  color: #16151a;
+  border-radius: 20px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Στυλ κοντέινερ στο dark mode */
+.dark-mode .container {
+  background-color: #16151a;
+  color: #f8f6f9;
+}
+
+/* Κουμπί αλλαγής θέματος */
+.toggle-theme {
+  text-align: right;
+}
+
+.toggle-theme button {
+  padding: 10px 10px;
+  background-color: #ad0823;
+  color: #fff;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-theme button:hover {
+  background-color: #000;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Προσθήκη περιθωρίων γύρω από τις εικόνες σημαίας */
+.language-switcher ul li {
+  margin: 5px; 
+}
+
+/* Προσθήκη flexbox στην λίστα */
+.language-switcher ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Προσαρμογή μεγέθους εικόνας σημαίας */
+.flag-icon {
+  width: 25px; 
+  height: 25px; 
+  cursor: pointer;
+}
+
+/* Στυλ για τις ενότητες "Προσωπικά Στοιχεία" */
+/* Στυλ για τα εικονίδια και το κείμενο δίπλα τους */
+.contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contact-icons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  color: var(--text-color-light); 
+}
+
+.contact-icons a:hover {
+  text-decoration: underline; 
+}
+
+/* Χρώμα κειμένου για το dark mode */
+.dark-mode .contact-icons a {
+  color: var(--text-color-dark);
+}
+
+.contact-icons img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: #ad283e; 
+  padding: 5px; 
+  border-radius: 50%; 
+}
+
+
+/* Στυλ για τις ενότητες "Δεξιότητες" */
+#skills {
+  margin-bottom: 30px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-title {
+  width: 80px;
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.progressbar {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progressbar__inner {
+  height: 100%;
+  background-color: #ad283e;
+  border-radius: 15px;
+  width: 0; /* Η αρχική τιμή πλάτους της μπάρας */
+  transition: width 2s ease-in-out; 
+  color: #ffffff;
+  text-align: center;
+  line-height: 30px; 
+}
+
+ /* Στυλ για το προφίλ και τον τίτλο */
+.profile-picture-container {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate {
+  transform: rotate(360deg);
+}
+
+.scale {
+  transform: scale(1.2);
+}
