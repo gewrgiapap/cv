@@ -215,3 +215,73 @@ h1 {
 .scale {
   transform: scale(1.2);
 }
+
+/* Στυλ για την ενότητα "Εργασιακή Εμπειρία" */
+#experience {
+  margin-bottom: 30px;
+}
+
+#experience h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+#experience ul {
+  padding: 0;
+  list-style: none;
+}
+
+#experience li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: var(--bg-color-light);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#experience h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: var(--text-color-light);
+}
+
+#experience h6 {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  color: #999;
+}
+
+#experience p {
+  font-size: 15px;
+  color: var(--text-color-light);
+}
+/* Στυλ για την ενότητα "Εκπαίδευση" */
+#education {
+  margin-bottom: 20px;
+}
+
+#education h2 {
+  margin: 10px 0 15px;
+  font-size: 1.5rem;
+}
+
+#education ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#education li {
+  margin-bottom: 15px;
+}
+
+#education h3 {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+#education h6 {
+  font-size: 14px;
+  color: #888;
+  margin: 0 0 10px;
+}
